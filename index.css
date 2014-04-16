@@ -1,0 +1,17 @@
+body {
+	background: url(header.jpg) no-repeat 50% -100px;
+}
+
+#header {
+	color: white;
+	text-shadow: 2px 2px 1px black;
+}
+
+#table-worldboss {
+	font-size: 1.5em;
+}
+
+.table-header {
+	font-size: 1.2em;
+	font-weight: bold;
+}
