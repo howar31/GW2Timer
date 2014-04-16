@@ -20,6 +20,35 @@ body {
 	background: #F8F8F8;
 }
 
+.row:nth-child(2) {
+	position: relative
+}
+
+.row:nth-child(2)::before {
+	content: "Now";
+	position: absolute;
+	top: 7px;
+	left: -35px;
+	font-size: 0.5em;
+	color: red;
+}
+
+.row:nth-child(2)::after {
+	background: url(splash.png) no-repeat;
+	opacity: 0.3;
+	height: 40px;
+	width: 100%;
+	top: -4px;
+	left: 0px;
+	position: absolute;
+	z-index: -1;
+	content: "";
+}
+
+.row:nth-child(2):nth-child(1) {
+	color: white;
+}
+
 .wbname {
 }
 

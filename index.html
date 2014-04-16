@@ -58,9 +58,13 @@ function sec2str (sec) {
 }
 
 function sortByTime(a, b) {
-    var x = a.upsec;
-    var y = b.upsec;
-    return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+	var now = new Date();
+	var nowoffset = str2sec(now.getHours()+":"+now.getMinutes());
+	var x = a.lcsec - nowoffset + 900;
+	var y = b.lcsec - nowoffset + 900;
+	if (x < 0) x += 86400;
+	if (y < 0) y += 86400;
+	return ((x < y) ? -1 : ((x > y) ? 1 : 0));
 }
 
 //function sortByFirstName(a, b) {
@@ -81,18 +85,26 @@ $.getJSON("./wbtime.json", function(json) {
 		var j = 0;
 		while(json.worldboss[i].uptime[j]) {
 			sec = str2sec(json.worldboss[i].uptime[j]);
-			wbt[k++] = {name: json.worldboss[i].name, uptime: json.worldboss[i].uptime[j], upsec: sec, scale: json.worldboss[i].scale};
+			lsec = sec + ((7 + getTimezone()) * 3600)
+			if (lsec >= 86400) lsec -= 86400;
+			wbt[k++] = {
+				name: json.worldboss[i].name, 
+				uptime: json.worldboss[i].uptime[j], 
+				upsec: sec, 
+				lctime: sec2str(lsec),
+				lcsec: lsec,
+				scale: json.worldboss[i].scale
+			};
 			j++;
 		}
 		i++;
 	}
 	wbt.sort(sortByTime);
 	for (i = 0; i<k; i++) {
-		var lctime = sec2str(wbt[i].upsec + ((7 + getTimezone()) * 3600));
 		var tmp = '<div class="row">'
 			+'<div class="col-sm-6 wbname">'+wbt[i].name+'</div>'
 			+'<div class="col-sm-3 psttime">'+wbt[i].uptime+'</div>'
-			+'<div class="col-sm-3 localtime">'+lctime+'</div>'
+			+'<div class="col-sm-3 localtime">'+wbt[i].lctime+'</div>'
 			+'</div>';
 		$("#table-worldboss").append(tmp); 
 	}
