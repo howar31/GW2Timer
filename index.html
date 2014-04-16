@@ -28,8 +28,8 @@
 	<div id="table-worldboss">
 	<div class="row table-header">
 		<div class="col-sm-6" id="wbname-title">World Boss</div>
+		<div class="col-sm-3" id="localtime-title">Local Time <span id="nowtime"></span></div>
 		<div class="col-sm-3" id="psttime-title">US Pacific Time (Server Time)</div>
-		<div class="col-sm-3" id="localtime-title">Local Time</div>
 	</div>
 	</div>
 
@@ -73,43 +73,60 @@ function sortByTime(a, b) {
 //    return ((x < y) ? -1 : ((x > y) ? 1 : 0));
 //}
 
+function getnowtime() {
+	var now = new Date();
+	var hh = now.getHours();
+	var mm = now.getMinutes();
+	var ss = now.getSeconds();
+	return ((hh < 10 ? "0" + hh : hh) + ":" + (mm < 10 ? "0" + mm : mm) + ":" + (ss  < 10 ? "0" + ss : ss));	
+}
+
 $( document ).ready(function() {
 	$("#localtime-title").append(" (UTC+"+getTimezone()+")");
+	refreshall();
+	setInterval(function() {
+		$("#nowtime").html(getnowtime());
+	},1000);
+	setInterval(function() {
+		refreshall();
+	},60000);
 });
 
-$.getJSON("./wbtime.json", function(json) {
-	var i = 0;
-	var k = 0;
-	var wbt = new Array();
-	while(json.worldboss[i]) {
-		var j = 0;
-		while(json.worldboss[i].uptime[j]) {
-			sec = str2sec(json.worldboss[i].uptime[j]);
-			lsec = sec + ((7 + getTimezone()) * 3600)
-			if (lsec >= 86400) lsec -= 86400;
-			wbt[k++] = {
-				name: json.worldboss[i].name, 
-				uptime: json.worldboss[i].uptime[j], 
-				upsec: sec, 
-				lctime: sec2str(lsec),
-				lcsec: lsec,
-				scale: json.worldboss[i].scale
-			};
-			j++;
+function refreshall () {
+	$(".row").slice(1).remove();
+	$.getJSON("./wbtime.json", function(json) {
+		var i = 0;
+		var k = 0;
+		var wbt = new Array();
+		while(json.worldboss[i]) {
+			var j = 0;
+			while(json.worldboss[i].uptime[j]) {
+				sec = str2sec(json.worldboss[i].uptime[j]);
+				lsec = sec + ((7 + getTimezone()) * 3600)
+				if (lsec >= 86400) lsec -= 86400;
+				wbt[k++] = {
+					name: json.worldboss[i].name, 
+					uptime: json.worldboss[i].uptime[j], 
+					upsec: sec, 
+					lctime: sec2str(lsec),
+					lcsec: lsec,
+					scale: json.worldboss[i].scale
+				};
+				j++;
+			}
+			i++;
 		}
-		i++;
-	}
-	wbt.sort(sortByTime);
-	for (i = 0; i<k; i++) {
-		var tmp = '<div class="row">'
-			+'<div class="col-sm-6 wbname">'+wbt[i].name+'</div>'
-			+'<div class="col-sm-3 psttime">'+wbt[i].uptime+'</div>'
-			+'<div class="col-sm-3 localtime">'+wbt[i].lctime+'</div>'
-			+'</div>';
-		$("#table-worldboss").append(tmp); 
-	}
-});
-
+		wbt.sort(sortByTime);
+		for (i = 0; i<k; i++) {
+			var tmp = '<div class="row">'
+				+'<div class="col-sm-6 wbname">'+wbt[i].name+'</div>'
+				+'<div class="col-sm-3 localtime">'+wbt[i].lctime+'</div>'
+				+'<div class="col-sm-3 psttime">'+wbt[i].uptime+'</div>'
+				+'</div>';
+			$("#table-worldboss").append(tmp); 
+		}
+	});
+}
 </script>
 </body>
 </html>
