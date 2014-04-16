@@ -26,8 +26,8 @@
 	</div>
 	<div id="table-worldboss">
 	<div class="row table-header">
-		<div class="col-md-6">World Boss</div>
-		<div class="col-md-3">US Pacific Time (Server Time)</div>
+		<div class="col-md-6" id="wbname-title">World Boss</div>
+		<div class="col-md-3" id="psttime-title">US Pacific Time (Server Time)</div>
 		<div class="col-md-3" id="localtime-title">Local Time</div>
 	</div>
 	</div>
@@ -73,9 +73,6 @@ $.getJSON("./wbtime.json", function(json) {
 	var k = 0;
 	var wbt = new Array();
 	while(json.worldboss[i]) {
-//			var tmp = '<div class="row">'
-//				+'<div class="col-md-6">'+json.worldboss[i].name+'</div>';
-//			$("#table-worldboss").append(tmp); 
 		var j = 0;
 		while(json.worldboss[i].uptime[j]) {
 			sec = str2sec(json.worldboss[i].uptime[j]);
@@ -86,7 +83,13 @@ $.getJSON("./wbtime.json", function(json) {
 	}
 	wbt.sort(sortByTime);
 	for (i = 0; i<k; i++) {
-		console.log(wbt[i]);
+		var lctime = sec2str(wbt[i].upsec + ((7 + getTimezone()) * 3600));
+		var tmp = '<div class="row">'
+			+'<div class="col-md-6 wbname">'+wbt[i].name+'</div>'
+			+'<div class="col-md-3 psttime">'+wbt[i].uptime+'</div>'
+			+'<div class="col-md-3 localtime">'+lctime+'</div>'
+			+'</div>';
+		$("#table-worldboss").append(tmp); 
 	}
 });
 

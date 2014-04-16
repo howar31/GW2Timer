@@ -15,3 +15,16 @@ body {
 	font-size: 1.2em;
 	font-weight: bold;
 }
+
+.row:nth-child(even) {
+	background: #F8F8F8;
+}
+
+.wbname {
+}
+
+.pstime {
+}
+
+.localtime {
+}
