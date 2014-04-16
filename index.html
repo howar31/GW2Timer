@@ -28,12 +28,16 @@
 	<div class="row table-header">
 		<div class="col-md-6">World Boss</div>
 		<div class="col-md-3">US Pacific Time (Server Time)</div>
-		<div class="col-md-3">Local Time</div>
+		<div class="col-md-3" id="localtime-title">Local Time</div>
 	</div>
 	</div>
 </div>
 
 <script>
+function getTimezone () {
+	var offset = new Date().getTimezoneOffset();
+	return (offset * -1 / 60);
+}
 
 function str2sec (str) {
 	var a = str.split(':');
@@ -47,6 +51,22 @@ function sec2str (sec) {
 //	return ((hh < 10 ? "0" + hh : hh) + ":" + (mm < 10 ? "0" + mm : mm) + ":" + (ss  < 10 ? "0" + ss : ss));
 	return ((hh < 10 ? "0" + hh : hh) + ":" + (mm < 10 ? "0" + mm : mm));
 }
+
+function sortByTime(a, b) {
+    var x = a.upsec;
+    var y = b.upsec;
+    return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+}
+
+//function sortByFirstName(a, b) {
+//    var x = a.FirstName.toLowerCase();
+//    var y = b.FirstName.toLowerCase();
+//    return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+//}
+
+$( document ).ready(function() {
+	$("#localtime-title").append(" (UTC+"+getTimezone()+")");
+});
 
 $.getJSON("./wbtime.json", function(json) {
 	var i = 0;
@@ -64,6 +84,7 @@ $.getJSON("./wbtime.json", function(json) {
 		}
 		i++;
 	}
+	wbt.sort(sortByTime);
 	for (i = 0; i<k; i++) {
 		console.log(wbt[i]);
 	}
