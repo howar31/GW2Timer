@@ -9,6 +9,7 @@ body {
 
 #table-worldboss {
 	font-size: 1.5em;
+	position: relative
 }
 
 .table-header {
@@ -22,6 +23,11 @@ body {
         -ms-animation: fadein 1s; /* Internet Explorer */
          -o-animation: fadein 1s; /* Opera */
             animation: fadein 1s;
+	transition: background-color 0.3s ease-out;
+}
+
+.row:hover {
+	background: #FFFFEE !important;
 }
 
 .row:nth-child(even) {
@@ -29,10 +35,9 @@ body {
 }
 
 .row:nth-child(2) {
-	position: relative
 }
 
-.row:nth-child(2)::before {
+.nowbar::before {
 	content: "Now";
 	position: absolute;
 	top: 7px;
@@ -41,47 +46,58 @@ body {
 	color: red;
 }
 
-.row:nth-child(2)::after {
+#nowbar {
+	position: absolute;
 	background: url(splash.png) no-repeat;
 	opacity: 0.3;
 	height: 40px;
 	width: 100%;
-	top: -4px;
-	left: 0px;
-	position: absolute;
+	top: 66px;
+	left: -15px;
 	z-index: -1;
-	content: "";
 }
 
-.row:nth-child(2):nth-child(1) {
-	color: white;
+#nowtext {
+	position: relative;
+	left: -40px;
+	color: red;
+	font-size: 0.8em;
 }
 
-.scale-lowlevel {
+.waypoint {
+	font-family: monospace;
+	cursor: pointer;
 }
 
-.scale-standard {
+.waypoint input {
+	margin-left: -14px;
+	position: absolute;
 }
 
-.scale-hardcore {
+.chatlink {
+	width: 100%;
+}
+
+.scale-lowlevel > .wbname {
+	color: #006600;
+	text-shadow: 0px 0px 20px #AAFFAA;
+}
+
+.scale-standard > .wbname {
+}
+
+.scale-hardcore > .wbname {
+	color: #990000;
+	text-shadow: 0px 0px 20px #FFAAAA;
 }
 
 .wbname {
 }
 
-.pstime {
-}
-
 .localtime {
 }
 
-.waypoint {
-    font-family: monospace;
-}
-
-.waypoint input {
-    margin-left: -4px;
-    position: absolute;
+.pstime {
 }
 
 #footer {

@@ -32,6 +32,7 @@
 		<div class="col-sm-3" id="psttime-title">US Pacific Time (Server Time)</div>
 		<div class="col-sm-2" id="waypoint-title">Waypoint</div>
 	</div>
+	<div id="nowbar"><span id="nowtext">Now</span></div>
 	</div>
 
 	<div id="footer">
@@ -93,7 +94,7 @@ $( document ).ready(function() {
 	},60000);
 	$( document ).on("click", ".waypoint:not(:has(input))", function() {
 		var text = this;
-		var chatlink = $("<input class=\"chatlink\" type=\"text\" value=\""+$( text ).text()+"\" />");
+		var chatlink = $("<input class='chatlink' type='text' value='"+$( text ).text()+"' />");
 		$( text ).html( chatlink );
 		chatlink.one("focusout", function() {
 			$( text ).html($( this ).val());
@@ -102,7 +103,7 @@ $( document ).ready(function() {
 });
 
 function refreshall () {
-	$(".row").slice(1).remove();
+	$(".table-content").remove();
 	$.getJSON("./wbtime.json", function(json) {
 		var i = 0;
 		var k = 0;
@@ -128,7 +129,7 @@ function refreshall () {
 		}
 		wbt.sort(sortByTime);
 		for (i = 0; i<k; i++) {
-			var tmp = '<div class="row scale-'+wbt[i].scale+'">'
+			var tmp = '<div class="row table-content scale-'+wbt[i].scale+'">'
 				+'<div class="col-sm-4 wbname">'+wbt[i].name+'</div>'
 				+'<div class="col-sm-3 localtime">'+wbt[i].lctime+'</div>'
 				+'<div class="col-sm-3 psttime">'+wbt[i].uptime+'</div>'
