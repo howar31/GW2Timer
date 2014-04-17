@@ -66,6 +66,15 @@ body {
 .localtime {
 }
 
+.waypoint {
+    font-family: monospace;
+}
+
+.waypoint input {
+    margin-left: -4px;
+    position: absolute;
+}
+
 #footer {
 	color: #CCCCCC;
 	padding-top: 9px;

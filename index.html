@@ -91,6 +91,14 @@ $( document ).ready(function() {
 	setInterval(function() {
 		refreshall();
 	},60000);
+	$( document ).on("click", ".waypoint:not(:has(input))", function() {
+		var text = this;
+		var chatlink = $("<input class=\"chatlink\" type=\"text\" value=\""+$( text ).text()+"\" />");
+		$( text ).html( chatlink );
+		chatlink.one("focusout", function() {
+			$( text ).html($( this ).val());
+		}).focus().select();
+	});
 });
 
 function refreshall () {
