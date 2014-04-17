@@ -27,9 +27,10 @@
 
 	<div id="table-worldboss">
 	<div class="row table-header">
-		<div class="col-sm-6" id="wbname-title">World Boss</div>
+		<div class="col-sm-4" id="wbname-title">World Boss</div>
 		<div class="col-sm-3" id="localtime-title">Local Time <span id="nowtime"></span></div>
 		<div class="col-sm-3" id="psttime-title">US Pacific Time (Server Time)</div>
+		<div class="col-sm-2" id="waypoint-title">Waypoint</div>
 	</div>
 	</div>
 
@@ -90,6 +91,14 @@ $( document ).ready(function() {
 	setInterval(function() {
 		refreshall();
 	},60000);
+	$( document ).on("click", ".waypoint:not(:has(input))", function() {
+		var text = this;
+		var chatlink = $("<input class=\"chatlink\" type=\"text\" value=\""+$( text ).text()+"\" />");
+		$( text ).html( chatlink );
+		chatlink.one("focusout", function() {
+			$( text ).html($( this ).val());
+		}).focus().select();
+	});
 });
 
 function refreshall () {
@@ -110,7 +119,8 @@ function refreshall () {
 					upsec: sec, 
 					lctime: sec2str(lsec),
 					lcsec: lsec,
-					scale: json.worldboss[i].scale
+					scale: json.worldboss[i].scale,
+					waypoint: json.worldboss[i].waypoint
 				};
 				j++;
 			}
@@ -118,10 +128,11 @@ function refreshall () {
 		}
 		wbt.sort(sortByTime);
 		for (i = 0; i<k; i++) {
-			var tmp = '<div class="row">'
-				+'<div class="col-sm-6 wbname">'+wbt[i].name+'</div>'
+			var tmp = '<div class="row scale-'+wbt[i].scale+'">'
+				+'<div class="col-sm-4 wbname">'+wbt[i].name+'</div>'
 				+'<div class="col-sm-3 localtime">'+wbt[i].lctime+'</div>'
 				+'<div class="col-sm-3 psttime">'+wbt[i].uptime+'</div>'
+				+'<div class="col-sm-2 waypoint">'+wbt[i].waypoint+'</div>'
 				+'</div>';
 			$("#table-worldboss").append(tmp); 
 		}
