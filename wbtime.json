@@ -2,71 +2,85 @@
 	"worldboss":[{
 		"name":"Megadestroyer",
 		"uptime":["16:00","21:00","02:30","07:30","12:30"],
-		"scale":"standard"
+		"scale":"standard",
+		"waypoint":"[&BM0CAAA=]"
 	},
 	{
 		"name":"Jungle Wurm",
 		"uptime":["16:15","18:15","20:15","22:15","00:15","02:15","04:15","06:15","07:15","08:15","10:15","12:15","14:15"],
-		"scale":"lowlevel"
+		"scale":"lowlevel",
+		"waypoint":"[&BEEFAAA=]"
 	},
 	{
 		"name":"TBD",
 		"uptime":["16:30","21:30","03:00","08:00","13:00"],
-		"scale":"standard"
+		"scale":"standard",
+		"waypoint":""
 	},
 	{
 		"name":"Shadow Behemoth",
 		"uptime":["16:45","18:45","20:45","22:45","00:45","02:45","04:45","06:45","08:45","10:45","12:45","14:45"],
-		"scale":"lowlevel"
+		"scale":"lowlevel",
+		"waypoint":"[&BPwAAAA=]"
 	},
 	{
 		"name":"The Shatterer",
 		"uptime":["17:00","22:00","00:00","04:00","08:30","13:30"],
-		"scale":"standard"
+		"scale":"standard",
+		"waypoint":"[&BE4DAAA=]"
 	},
 	{
 		"name":"Svanir Shaman",
 		"uptime":["17:15","19:15","21:15","23:15","01:15","03:15","05:15","09:15","11:15","13:15","15:15"],
-		"scale":"lowlevel"
+		"scale":"lowlevel",
+		"waypoint":"[&BH4BAAA=]"
 	},
 	{
 		"name":"Modniir Ulgoth",
 		"uptime":["17:30","22:30","00:30","05:00","09:30","14:00"],
-		"scale":"standard"
+		"scale":"standard",
+		"waypoint":"[&BLEAAAA=]"
 	},
 	{
 		"name":"Fire Elemental",
 		"uptime":["17:45","19:45","21:45","23:45","01:45","03:45","05:45","07:45","09:45","11:45","13:45","15:45"],
-		"scale":"lowlevel"
+		"scale":"lowlevel",
+		"waypoint":"[&BEYAAAA=]"
 	},
 	{
 		"name":"Karka Queen",
 		"uptime":["18:00","03:30","09:00"],
-		"scale":"hardcore"
+		"scale":"hardcore",
+		"waypoint":"[&BNcGAAA=]"
 	},
 	{
 		"name":"Golem Mark II",
 		"uptime":["18:30","23:00","01:00","06:00","10:30","14:30"],
-		"scale":"standard"
+		"scale":"standard",
+		"waypoint":"[&BNQCAAA=]"
 	},
 	{
 		"name":"Tequatl",
 		"uptime":["19:00","04:30","10:00"],
-		"scale":"hardcore"
+		"scale":"hardcore",
+		"waypoint":"[&BNABAAA=]"
 	},
 	{
 		"name":"Claw of Jormag",
 		"uptime":["19:30","23:30","01:30","06:15","11:30","15:00"],
-		"scale":"standard"
+		"scale":"standard",
+		"waypoint":"[&BHoCAAA=]"
 	},
 	{
 		"name":"Great Jungle Wurm",
 		"uptime":["20:00","05:30","11:00"],
-		"scale":"hardcore"
+		"scale":"hardcore",
+		"waypoint":"[&BKoBAAA=]"
 	},
 	{
 		"name":"Taidha Covington",
 		"uptime":["20:30","02:00","07:00","12:00","15:30"],
-		"scale":"standard"
+		"scale":"standard",
+		"waypoint":"[&BKgBAAA=]"
 	}]
 }
