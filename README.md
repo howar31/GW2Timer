@@ -3,7 +3,7 @@
 
 -
 
-[GW2 Timer](http://howar31.github.io/GW2Timer/)
+Webpage: [GW2 Timer](http://howar31.github.io/GW2Timer/)
 
 > Feature:  
 > * Official World Boss time table sorted by uptime.
@@ -23,7 +23,7 @@ Due to 2014 Feature Pack update on April 15, 2014, most of the World Bosses now 
 
 -
 
-[GW2 Timer](http://howar31.github.io/GW2Timer/)
+網頁: [GW2 Timer](http://howar31.github.io/GW2Timer/)
 
 > 特色功能:
 > * 官方世界王時間表，依時間排序
