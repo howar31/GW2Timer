@@ -70,7 +70,7 @@ body {
 }
 
 .waypoint input {
-	margin-left: -14px;
+	margin: -1px 0 0 -4px;
 	position: absolute;
 }
 
@@ -99,7 +99,7 @@ body {
 
 .pstime {
 }
-
+2
 #footer {
 	color: #CCCCCC;
 	padding-top: 9px;
