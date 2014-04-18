@@ -85,7 +85,7 @@ $( document ).ready(function() {
 		$("#nowtime").html(getnowtime());
 	},1000);
 	setInterval(function() {
-		refreshall();
+//		refreshall();
 	},60000);
 	$( document ).on("click", ".waypoint:not(:has(input))", function() {
 		var text = this;

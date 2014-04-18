@@ -9,7 +9,6 @@ body {
 
 #table-worldboss {
 	font-size: 1.5em;
-	position: relative
 }
 
 .table-header {
@@ -23,11 +22,15 @@ body {
         -ms-animation: fadein 1s; /* Internet Explorer */
          -o-animation: fadein 1s; /* Opera */
             animation: fadein 1s;
-	transition: background-color 0.3s ease-out;
+	transition: border-left 0.3s ease-out,
+		    background 0.3s ease-out;
+	position: relative;
+	border-left: 3px solid white;
 }
 
-.row:hover {
-	background: #FFFFEE !important;
+.row:not(:nth-child(1)):hover {
+	background: #FFEFEF;
+	border-left: 3px solid #CC0000;
 }
 
 .row:nth-child(even) {
@@ -35,6 +38,17 @@ body {
 }
 
 .row:nth-child(2) {
+	background: url(splash.png) no-repeat;
+	background-size: auto 100% !important;
+}
+
+.row:nth-child(2)::before {
+	content: "Now";
+	position: absolute;
+	top: 7px;
+	left: -30px;
+	font-size: 0.5em;
+	color: red;
 }
 
 .nowbar::before {
