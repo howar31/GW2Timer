@@ -51,33 +51,6 @@ body {
 	color: red;
 }
 
-.nowbar::before {
-	content: "Now";
-	position: absolute;
-	top: 7px;
-	left: -35px;
-	font-size: 0.5em;
-	color: red;
-}
-
-#nowbar {
-	position: absolute;
-	background: url(splash.png) no-repeat;
-	opacity: 0.3;
-	height: 40px;
-	width: 100%;
-	top: 66px;
-	left: -15px;
-	z-index: -1;
-}
-
-#nowtext {
-	position: relative;
-	left: -40px;
-	color: red;
-	font-size: 0.8em;
-}
-
 .waypoint {
 	font-family: monospace;
 	cursor: pointer;
