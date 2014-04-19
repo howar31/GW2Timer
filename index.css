@@ -34,16 +34,16 @@ body {
 	border-left: 3px solid #CC0000;
 }
 
-.row:nth-child(odd) {
+.row:nth-child(even) {
 	background: #F8F8F8;
 }
 
-.row:nth-child(2) {
+.row:nth-child(3) {
 	background: url(splash.png) no-repeat;
 	background-size: auto 100% !important;
 }
 
-.row:nth-child(2)::before {
+.row:nth-child(3)::before {
 	content: "Now";
 	position: absolute;
 	top: 7px;

@@ -19,8 +19,8 @@ function sec2str (sec) {
 function sortByTime(a, b) {
 	var now = new Date();
 	var nowoffset = str2sec(now.getHours()+":"+now.getMinutes());
-	var x = a.lcsec - nowoffset + 900;
-	var y = b.lcsec - nowoffset + 900;
+	var x = a.lcsec - nowoffset + 1800;
+	var y = b.lcsec - nowoffset + 1800;
 	if (x < 0) x += 86400;
 	if (y < 0) y += 86400;
 	return ((x < y) ? -1 : ((x > y) ? 1 : 0));
