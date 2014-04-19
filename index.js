@@ -53,6 +53,7 @@ function refreshall () {
 				lsec = sec + ((7 + getTimezone()) * 3600)
 				if (lsec >= 86400) lsec -= 86400;
 				wbt[k++] = {
+					class: json.worldboss[i].name.replace(/\s+/g, ''),
 					name: json.worldboss[i].name, 
 					uptime: json.worldboss[i].uptime[j], 
 					upsec: sec, 
@@ -67,8 +68,9 @@ function refreshall () {
 		}
 		wbt.sort(sortByTime);
 		for (i = 0; i<k; i++) {
-			var tmp = '<div class="row table-content scale-'+wbt[i].scale+'">'
-				+'<div class="col-sm-4 wbname">'+wbt[i].name+'</div>'
+			var tmpd = wbdonecheck(wbt[i].class)?" done":"";
+			var tmp = '<div class="row table-content scale-'+wbt[i].scale+' '+wbt[i].class+'">'
+				+'<div class="col-sm-4 wbname'+tmpd+'">'+wbt[i].name+'</div>'
 				+'<div class="col-sm-3 localtime">'+wbt[i].lctime+'</div>'
 				+'<div class="col-sm-3 psttime">'+wbt[i].uptime+'</div>'
 				+'<div class="col-sm-2 waypoint">'+wbt[i].waypoint+'</div>'
@@ -78,15 +80,71 @@ function refreshall () {
 	});
 }
 
+function getCookie(cname)
+{
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) {
+		var c = ca[i].trim();
+		if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+	}
+	return "";
+}
+
+Array.prototype.clean = function(deleteValue) {
+  for (var i = 0; i < this.length; i++) {
+    if (this[i] == deleteValue) {         
+      this.splice(i, 1);
+      i--;
+    }
+  }
+  return this;
+};
+
+function wbdone(wbval) {
+	var wbd = getCookie('wbdone').split('/');
+	var wbset = $.inArray( wbval, wbd );
+	if (wbset > -1) {
+		wbd.splice(wbset, 1);
+	} else {
+		wbd.push(wbval);
+	}
+	wbd.clean("");
+	wbval = wbd.join("/");
+
+	var now = new Date();
+	var expire = new Date();
+	expire.setUTCFullYear(now.getUTCFullYear());
+	expire.setUTCMonth(now.getUTCMonth());
+	expire.setUTCDate(now.getUTCDate()+1);
+	expire.setUTCHours(0);
+	expire.setUTCMinutes(0);
+	expire.setUTCSeconds(0);
+	document.cookie = "wbdone="+wbval+"; expires=" + expire.toUTCString() +";";
+}
+
+function wbdonecheck(wbval) {
+	var wbd = getCookie('wbdone').split('/');
+	var wbset = $.inArray( wbval, wbd );
+	if (wbset > -1) {
+		return true;
+	} else {
+		return false
+	}
+}
+
 $( document ).ready(function() {
 	$("#localtime-title").append(" (UTC+"+getTimezone()+")");
+
 	refreshall();
+
 	setInterval(function() {
 		$("#nowtime").html(getnowtime());
 	},1000);
 	setInterval(function() {
 		refreshall();
 	},60000);
+
 	$( document ).on("click", ".waypoint:not(:has(input))", function() {
 		var text = this;
 		var chatlink = $("<input class='chatlink' type='text' value='"+$( text ).text()+"' />");
@@ -94,5 +152,11 @@ $( document ).ready(function() {
 		chatlink.one("focusout", function() {
 			$( text ).html($( this ).val());
 		}).focus().select();
+	});
+
+	$( document ).on("click", ".wbname", function() {
+		var wbid = $(this).html().replace(/\s+/g, '');
+		wbdone(wbid);
+		$("."+wbid+">.wbname").toggleClass("done");
 	});
 });

@@ -14,6 +14,7 @@ body {
 .table-header {
 	font-size: 1.2em;
 	font-weight: bold;
+	background: white !important;
 }
 
 .row {
@@ -33,7 +34,7 @@ body {
 	border-left: 3px solid #CC0000;
 }
 
-.row:nth-child(even) {
+.row:nth-child(odd) {
 	background: #F8F8F8;
 }
 
@@ -49,6 +50,11 @@ body {
 	left: -30px;
 	font-size: 0.5em;
 	color: red;
+}
+
+.done {
+	text-decoration:line-through;
+	opacity: 0.2;
 }
 
 .waypoint {
@@ -79,6 +85,7 @@ body {
 }
 
 .wbname {
+	cursor: pointer;
 }
 
 .localtime {
