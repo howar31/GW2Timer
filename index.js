@@ -140,10 +140,13 @@ $( document ).ready(function() {
 
 	setInterval(function() {
 		$("#nowtime").html(getnowtime());
+		var rn = new Date();
+		var rs = rn.getSeconds();
+		if (rs == 0) refreshall();
 	},1000);
-	setInterval(function() {
-		refreshall();
-	},60000);
+//	setInterval(function() {
+//		refreshall();
+//	},60000);
 
 	$( document ).on("click", ".waypoint:not(:has(input))", function() {
 		var text = this;
