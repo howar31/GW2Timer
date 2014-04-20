@@ -15,6 +15,24 @@ body {
 	font-size: 1.2em;
 	font-weight: bold;
 	background: white !important;
+	white-space: nowrap;
+	margin-bottom: 10px;
+}
+
+.table-sub-header {
+	font-size: 0.7em;
+}
+
+#countdown-title,
+#localtime-title,
+#psttime-title {
+	text-align: center;
+}
+
+.countdown,
+.localtime,
+.psttime {
+	text-align: center;
 }
 
 .row {
@@ -65,6 +83,7 @@ body {
 .waypoint input {
 	margin-left: -14px;
 	position: absolute;
+	z-index: 10;
 }
 
 .chatlink {
@@ -86,12 +105,6 @@ body {
 
 .wbname {
 	cursor: pointer;
-}
-
-.localtime {
-}
-
-.pstime {
 }
 
 #footer {

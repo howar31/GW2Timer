@@ -26,12 +26,6 @@ function sortByTime(a, b) {
 	return ((x < y) ? -1 : ((x > y) ? 1 : 0));
 }
 
-//function sortByFirstName(a, b) {
-//    var x = a.FirstName.toLowerCase();
-//    var y = b.FirstName.toLowerCase();
-//    return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-//}
-
 function getnowtime() {
 	var now = new Date();
 	var hh = now.getHours();
@@ -134,7 +128,7 @@ function wbdonecheck(wbval) {
 }
 
 $( document ).ready(function() {
-	$("#localtime-title").append(" (UTC+"+getTimezone()+")");
+	$("#nowtimezone").append(" (UTC+"+getTimezone()+")");
 
 	refreshall();
 
@@ -144,9 +138,6 @@ $( document ).ready(function() {
 		var rs = rn.getSeconds();
 		if (rs == 0) refreshall();
 	},1000);
-//	setInterval(function() {
-//		refreshall();
-//	},60000);
 
 	$( document ).on("click", ".waypoint:not(:has(input))", function() {
 		var text = this;
