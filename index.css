@@ -103,8 +103,17 @@ body {
 	text-shadow: 0px 0px 20px #FFAAAA;
 }
 
+.hiddenvalue {
+}
+
 .wbname {
 	cursor: pointer;
+}
+
+.wbmap {
+	color: #CCCCCC;
+	text-shadow: none;
+	font-size: 0.6em;
 }
 
 #footer {

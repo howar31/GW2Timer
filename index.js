@@ -54,6 +54,7 @@ function refreshall () {
 					lctime: sec2str(lsec),
 					lcsec: lsec,
 					scale: json.worldboss[i].scale,
+					map: json.worldboss[i].map,
 					waypoint: json.worldboss[i].waypoint
 				};
 				j++;
@@ -62,9 +63,9 @@ function refreshall () {
 		}
 		wbt.sort(sortByTime);
 		for (i = 0; i<k; i++) {
-			var tmpd = wbdonecheck(wbt[i].class)?" done":"";
+			var donechk = wbdonecheck(wbt[i].class)?" done":"";
 			var tmp = '<div class="row table-content scale-'+wbt[i].scale+' '+wbt[i].class+'">'
-				+'<div class="col-sm-4 wbname'+tmpd+'">'+wbt[i].name+'</div>'
+				+'<div class="col-sm-4 wbname'+donechk+'"><span class="hiddenvalue" hidden>'+wbt[i].class+'</span>'+wbt[i].name+'<span class="wbmap">'+(wbt[i].map?" - "+wbt[i].map:"")+'</span></div>'
 				+'<div class="col-sm-3 localtime">'+wbt[i].lctime+'</div>'
 				+'<div class="col-sm-3 psttime">'+wbt[i].uptime+'</div>'
 				+'<div class="col-sm-2 waypoint">'+wbt[i].waypoint+'</div>'
@@ -149,7 +150,7 @@ $( document ).ready(function() {
 	});
 
 	$( document ).on("click", ".wbname", function() {
-		var wbid = $(this).html().replace(/\s+/g, '');
+		var wbid = $(this).children("span.hiddenvalue").html();
 		wbdone(wbid);
 		$("."+wbid+">.wbname").toggleClass("done");
 	});
