@@ -1,6 +1,8 @@
 # GW2 Timer #
 *2014 Feature Pack updated world bosses time table.*
 
+![previewimg](GW2Timer_Preview.png)
+
 -
 
 Webpage: [GW2 Timer](http://howar31.github.io/GW2Timer/)
