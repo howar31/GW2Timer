@@ -48,8 +48,11 @@ body {
 }
 
 .row:not(:nth-child(1)):hover {
-	background: #FFEFEF;
 	border-left: 3px solid #CC0000;
+}
+
+.row-highlight {
+	background: #FFEFEF !important;
 }
 
 .row:nth-child(even) {
