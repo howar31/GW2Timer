@@ -51,7 +51,8 @@ body {
 	border-left: 3px solid #CC0000;
 }
 
-.row-highlight {
+.row-highlight,
+.note-hover {
 	background: #FFEFEF !important;
 }
 
@@ -74,7 +75,7 @@ body {
 }
 
 .done {
-	text-decoration:line-through;
+	text-decoration: line-through;
 	opacity: 0.2;
 }
 
@@ -93,7 +94,8 @@ body {
 	width: 100%;
 }
 
-.scale-lowlevel > .wbname {
+.scale-lowlevel > .wbname,
+.note-green {
 	color: #006600;
 	text-shadow: 0px 0px 20px #AAFFAA;
 }
@@ -101,7 +103,8 @@ body {
 .scale-standard > .wbname {
 }
 
-.scale-hardcore > .wbname {
+.scale-hardcore > .wbname,
+.note-red {
 	color: #990000;
 	text-shadow: 0px 0px 20px #FFAAAA;
 }
@@ -118,6 +121,25 @@ body {
 	color: #CCCCCC;
 	text-shadow: none;
 	font-size: 0.6em;
+}
+
+#note {
+	padding-top: 9px;
+	margin: 20px 0 20px;
+	border-top: 1px solid #EEE;
+}
+
+#note-title {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.note-done {
+	text-decoration: line-through;
+}
+
+.note-underline {
+	text-decoration: underline;
 }
 
 #footer {

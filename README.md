@@ -23,6 +23,8 @@ Due to 2014 Feature Pack update on April 15, 2014, most of the World Bosses now 
 > * Traditional Chinese translation.
 > * Illustration.
 
+Any bug report or suggestion is welcome.  And yes you may also whisper me in-game, my GW2 ID: HowarXXXI.3409
+
 -
 
 > 特色功能:
@@ -41,3 +43,5 @@ Due to 2014 Feature Pack update on April 15, 2014, most of the World Bosses now 
 > 預計功能:
 > * 中文翻譯切換
 > * 網頁內文字說明
+
+歡迎任何錯誤回報或建議，當然也可以在遊戲中直接密語我，我的GW2 ID: HowarXXXI.3409
