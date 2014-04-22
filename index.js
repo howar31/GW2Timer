@@ -155,8 +155,13 @@ function TTS ( text ) {
 function getLang(tolang) {
 	$.getJSON("./lang.json", function(json) {
 		for(var k in json[tolang]) {
-			if (k == "lang-name") continue;
-			$("#"+k).html(json[tolang][k]);
+			if (k != "lang-name") {
+				var langhtml = json[tolang][k];
+				if (typeof json[tolang][k] === "object") {
+					langhtml = json[tolang][k].join("");
+				}
+				$("#"+k).html(langhtml);
+			}
 		};
 	});
 }
