@@ -23,9 +23,9 @@ body {
 	font-size: 0.7em;
 }
 
-#countdown-title,
-#localtime-title,
-#psttime-title {
+#countdown-div,
+#localtime-div,
+#psttime-div {
 	text-align: center;
 }
 
@@ -35,7 +35,24 @@ body {
 	text-align: center;
 }
 
-.row {
+#navbar {
+	margin: 20px 0px 20px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#lang-select {
+	height: 100%;
+	font-size: 0.8em;
+	padding: 2px 5px;
+	font-weight: normal;
+}
+
+#table-worldboss {
+	margin: 20px 0px 20px;
+}
+
+#table-worldboss .row {
     -webkit-animation: fadein 1s; /* Safari and Chrome */
        -moz-animation: fadein 1s; /* Firefox */
         -ms-animation: fadein 1s; /* Internet Explorer */
@@ -47,25 +64,25 @@ body {
 	border-left: 3px solid white;
 }
 
-.row:not(:nth-child(1)):hover {
+#table-worldboss .row:not(:nth-child(1)):hover {
 	border-left: 3px solid #CC0000;
 }
 
-.row-highlight,
+#table-worldboss .row-highlight,
 .note-hover {
 	background: #FFEFEF !important;
 }
 
-.row:nth-child(even) {
+#table-worldboss .row:nth-child(even) {
 	background: #F8F8F8;
 }
 
-.row:nth-child(3) {
+#table-worldboss .row:nth-child(3) {
 	background: url(splash.png) no-repeat;
 	background-size: auto 100% !important;
 }
 
-.row:nth-child(3)::before {
+#table-worldboss .row:nth-child(3)::before {
 	content: "Now";
 	position: absolute;
 	top: 7px;
@@ -125,7 +142,7 @@ body {
 
 #note {
 	padding-top: 9px;
-	margin: 20px 0 20px;
+	margin: 20px 0px 20px;
 	border-top: 1px solid #EEE;
 }
 

@@ -1,0 +1,60 @@
+{
+	"en":{
+		"lang-name":"English",
+		"header-title":"Guild Wars 2 Timer",
+		"header-subtitle":"2014 Feature Pack updated world bosses time table.",
+		"nav-note":"Note",
+		"wbname-title":"World Boss",
+		"localtime-title":"Local Time",
+		"psttime-title":"Server Time",
+		"waypoint-title":"Waypoint",
+		"note-title":"Note",
+		"note-totop":"Back to top",
+		"note-content":[
+		"<li>Colours on World Boss name are the scale of event <a href=\"https://www.guildwars2.com/en/news/the-megaserver-system-world-bosses-and-events/\" target=\"_blank\">announced by official</a>:",
+		"<ul>",
+			"<li><span class=\"note-green\">Greens</span> are <span class=\"note-underline\">Low-Level World Events</span>.</li>",
+			"<li>Blacks are <span class=\"note-underline\">Standard World Events</span>.</li>",
+			"<li><span class=\"note-red\">Reds</span> are <span class=\"note-underline\">Hard-Core, Mega-Organized Events</span>.</li>",
+		"</ul>",
+		"</li>",
+		"<li>Click on World Boss names to <span class=\"note-done\">cross them off</span> when you done those events.  Click again to undo.</li>",
+		"<li>Current event is marked as red background and \"<span class=\"note-red\">New</span>\" text.</li>",
+		"<li>\"Local Time\" is automatically converted to user's current timezone.</li>",
+		"<li>\"Server Time\" is in-game server time which timezone is PST (PDT).</li>",
+		"<li>Click on Waypoint chat link to copy the chat link and paste it in game chat.  You will then see a clickable in-game waypoint link.</li>",
+		"<li>Hover on one World Boss event will also <span class=\"note-hover\">highlight</span> all the same event on the whole time table.</li>",
+		"<li>This page will auto-refresh at 0 second every minute.</li>",
+		"<li>Some World Boss events not in the normal rotation as official announced previously are not listed above.  Such as Fire Shaman, Dredge Commissar, Foulbear Chieftain, Eye of Zhaitan and Temple events.</li>"
+		]
+	},
+	"zh-tw":{
+		"lang-name":"正體中文",
+		"header-title":"激戰2 世界王時間表",
+		"header-subtitle":"2014特色包 全新世界王輪值時間表",
+		"nav-note":"網頁說明",
+		"wbname-title":"世界王",
+		"localtime-title":"本地時間",
+		"psttime-title":"伺服器時間",
+		"waypoint-title":"傳送點",
+		"note-title":"說明",
+		"note-totop":"回到頂端",
+		"note-content":[
+		"<li>世界王名稱上的顏色是依照<a href=\"https://www.guildwars2.com/en/news/the-megaserver-system-world-bosses-and-events/\" target=\"_blank\">官方公告</a>的世界王等級標記:",
+		"<ul>",
+			"<li><span class=\"note-green\">綠色</span> 是 <span class=\"note-underline\">低等世界事件</span>.</li>",
+			"<li>黑色 是 <span class=\"note-underline\">標準世界事件</span>.</li>",
+			"<li><span class=\"note-red\">紅色</span> 是 <span class=\"note-underline\">高強度、超大團體事件</span>.</li>",
+		"</ul>",
+		"</li>",
+		"<li>點擊世界王名字可以 <span class=\"note-done\">標記</span> 你已經完成的事件，再點一次可以取消標記</li>",
+		"<li>目前進行中的世界王世界以紅圖背景與「<span class=\"note-red\">New</span>」字樣標記</li>",
+		"<li>「本地時間」會自動轉換成目前使用者所在時區的時間</li>",
+		"<li>「伺服器時間」與遊戲內的伺服器時間相同，時區為太平洋時區 PST (PDT)</li>",
+		"<li>點擊傳送點代碼可以全選，將其複製並貼在遊戲聊天室窗中就會自動產生遊戲內可以點選的傳送點連結</li>",
+		"<li>滑鼠指標指在一個世界王事件上，會同時 <span class=\"note-hover\">高亮標記</span> 所有相同的世界王事件</li>",
+		"<li>世界王時間表會在每分鐘零秒的時候自動刷新並重新排序，不需要手動按重新整理</li>",
+		"<li>有些世界王並沒有列在上面的時間表中，例如Fire Shaman(火薩滿)、Dredge Commissar(地鼠)、Foulbear Chieftain(歐格)、Eye of Zhaitan(大眼)還有神廟事件，這是因為這些世界王並沒有被官方列在一般的世界王排班時間內，所以並非固定時間出現</li>"
+		]
+	}
+}

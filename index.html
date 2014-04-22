@@ -22,42 +22,34 @@
 <body>
 <div class="container">
 	<div class="page-header" id="header">
-		<h1 id="header-title">Guild Wars 2 Timer</h1>
-		<p class="lead">2014 Feature Pack updated world bosses time table.</p>
+		<h1 id="header-title"></h1>
+		<p class="lead" id="header-subtitle"></p>
+	</div>
+
+	<div class="row" id="navbar">
+		<div class="col-sm-10"><a href="#note" id="nav-note"></a></div>
+		<div class="col-sm-2"><select id="lang-select" class="form-control"></select></div>
 	</div>
 
 	<div id="table-worldboss">
 		<div class="row table-header">
-			<div class="col-sm-4" id="wbname-title">World Boss</div>
-			<div class="col-sm-3" id="localtime-title">Local Time<br><span id="nowtimezone" class="table-sub-header"><span id="nowtime"></span></span></div>
-			<div class="col-sm-3" id="psttime-title">Server Time<br><span class="table-sub-header">(US Pacific Time)</span></div>
-			<div class="col-sm-2" id="waypoint-title">Waypoint</div>
+			<div class="col-sm-4" id="wbname-div"><span id="wbname-title"></span></div>
+			<div class="col-sm-3" id="localtime-div"><span id="localtime-title"></span><br><span id="nowtimezone" class="table-sub-header"><span id="nowtime"></span></span></div>
+			<div class="col-sm-3" id="psttime-div"><span id="psttime-title"></span><br><span class="table-sub-header">(US Pacific Time)</span></div>
+			<div class="col-sm-2" id="waypoint-div"><span id="waypoint-title"></span></div>
 		</div>
 	</div>
 
 	<div id="note">
-	<p id="note-title">Note</p>
-	<ul>
-		<li>Colours on World Boss name are the scale of event <a href="https://www.guildwars2.com/en/news/the-megaserver-system-world-bosses-and-events/" target="_blank">announced by official</a>:
-		<ul>
-			<li><span class="note-green">Greens</span> are <span class="note-underline">Low-Level World Events</span>.</li>
-			<li>Blacks are <span class="note-underline">Standard World Events</span>.</li>
-			<li><span class="note-red">Reds</span> are <span class="note-underline">Hard-Core, Mega-Organized Events</span>.</li>
-		</ul>
-		</li>
-		<li>Click on World Boss names to <span class="note-done">cross them off</span> when you done those events.  Click again to undo.</li>
-		<li>Current event is marked as red background and "<span class="note-red">New</span>" text.</li>
-		<li>"Local Time" is automatically converted to user's current timezone.</li>
-		<li>"Server Time" is in-game server time which timezone is PST (PDT).</li>
-		<li>Click on Waypoint chat link to copy the chat link and paste it in game chat.  You'll then see a clickable in-game waypoint link.</li>
-		<li>Hover on one World Boss event will also <span class="note-hover">highlight</span> all the same event on the whole time table.</li>
-		<li>This page will auto-refresh at 0 second every minute.</li>
+	<p id="note-title"></p>
+	<ul id="note-content">
 	</ul>
+	<a href="#header" id="note-totop"></a>
 	</div>
 
 	<div id="footer">
-		<p>Created and maintained by <a href="http://about.me/howar31" target="_blank">Howar31</a> @ 2014.04.17</p>
-		<p>This project is hosted on <a href="https://github.com/howar31/GW2Timer" target="_blank">GitHub</a>.  Any bug report or suggestion is welcome.  And yes you may also whisper me in-game, my GW2 ID: HowarXXXI.3409</p>
+		<p id="footer-1">Created and maintained by <a href="http://about.me/howar31" target="_blank">Howar31</a> @ 2014.04.17</p>
+		<p id="footer-2">This project is hosted on <a href="https://github.com/howar31/GW2Timer" target="_blank">GitHub</a>.  Any bug report or suggestion is welcome.  And yes you may also whisper me in-game, my GW2 ID: HowarXXXI.3409</p>
 	</div>
 </div>
 

@@ -86,6 +86,10 @@ function getCookie(cname)
 	return "";
 }
 
+function setCookie(cname, cval, cexp) {
+	document.cookie = cname + "=" + cval + "; expires=" + cexp +";";
+}
+
 Array.prototype.clean = function(deleteValue) {
   for (var i = 0; i < this.length; i++) {
     if (this[i] == deleteValue) {         
@@ -115,7 +119,7 @@ function wbdone(wbval) {
 	expire.setUTCHours(0);
 	expire.setUTCMinutes(0);
 	expire.setUTCSeconds(0);
-	document.cookie = "wbdone="+wbval+"; expires=" + expire.toUTCString() +";";
+	setCookie("wbdone", wbval, expire.toUTCString());
 }
 
 function wbdonecheck(wbval) {
@@ -148,17 +152,52 @@ function TTS ( text ) {
 	window.speechSynthesis.speak(msg);
 }
 
+function getLang(tolang) {
+	$.getJSON("./lang.json", function(json) {
+		for(var k in json[tolang]) {
+			if (k == "lang-name") continue;
+			$("#"+k).html(json[tolang][k]);
+		};
+	});
+}
+
+function refreshlang() {
+	var clang = getCookie("lang");
+
+	$.getJSON("./lang.json", function(json) {
+		for(var k in json) {
+			if (k == clang) {
+				$("#lang-select").append($("<option>").text(json[k]["lang-name"]).attr("value", k).attr("selected", true));
+			} else {
+				$("#lang-select").append($("<option>").text(json[k]["lang-name"]).attr("value", k));
+			}
+		};
+	});
+
+	getLang(clang?clang:"en");
+}
+
 $( document ).ready(function() {
 	$("#nowtimezone").append(" (UTC+"+getTimezone()+")");
 
+	refreshlang();
 	refreshall();
 
 	setInterval(function() {
 		$("#nowtime").html(getnowtime());
 		var rn = new Date();
 		var rs = rn.getSeconds();
+		// auto refresh table at 0 second
 		if (rs == 0) refreshall();
 	},1000);
+
+	$("#lang-select").change(function() {
+		getLang($("#lang-select option:selected").val());
+		var now = new Date();
+		var expire = new Date();
+		expire.setFullYear(now.getFullYear() + 10);
+		setCookie("lang", $("#lang-select option:selected").val(), expire );
+	});
 
 	$( document ).on("click", ".waypoint:not(:has(input))", function() {
 		var text = this;
