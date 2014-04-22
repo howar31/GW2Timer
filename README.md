@@ -2,9 +2,10 @@
 *2014 Feature Pack updated world bosses time table.*
 
 GW2 Timer: [http://howar31.github.io/GW2Timer/](http://howar31.github.io/GW2Timer/)
-![previewimg](GW2Timer_Preview.png)
 
 -
+
+![previewimg](GW2Timer_Preview_en.png)
 
 > Feature:  
 > * Official World Boss time table sorted by uptime.
@@ -20,13 +21,15 @@ GW2 Timer: [http://howar31.github.io/GW2Timer/](http://howar31.github.io/GW2Time
 >   * Currently support English and Traditional Chinese.
 >   * Webpage will remember which language you choose last time. No need to re-select everytime you visit the webpage.
 >   * If you would like to contribute additional language translation, feel free to fork the project on Github and send me pull request. Or just simply send me plain text translation and I'll make it online!
+> * Note for webpage illustration
 
 Due to 2014 Feature Pack update on April 15, 2014, most of the World Bosses now show up in specific time.  I want a neat and clean and simple time table to track the World Boss event so I created this webpage.  Hope you like it. :D
-> * Note for webpage illustration
 
 Any bug report or suggestion is welcome.  And yes you may also whisper me in-game, my GW2 ID: HowarXXXI.3409
 
 -
+
+![previewimg](GW2Timer_Preview_zhtw.png)
 
 > 特色功能:
 > * 官方世界王時間表，依時間排序
