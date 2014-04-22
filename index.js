@@ -128,6 +128,20 @@ function wbdonecheck(wbval) {
 	}
 }
 
+function TTS ( text ) {
+//	var section, frame;
+//	section   = document.getElementsByTagName( "head" )[ 0 ];
+//	frame     = document.createElement( "iframe" );
+//	frame.src = 'http://translate.google.com/translate_tts?ie=utf-8&tl=en&q=' + escape( text );
+//	section.appendChild( frame );
+
+	var audio = new Audio();
+	audio.src = 'http://translate.google.com/translate_tts?ie=utf-8&tl=en&q=' + escape( text );
+console.log(audio);
+	audio.load();
+	audio.play();
+}
+
 $( document ).ready(function() {
 	$("#nowtimezone").append(" (UTC+"+getTimezone()+")");
 
