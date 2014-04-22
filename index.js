@@ -128,18 +128,24 @@ function wbdonecheck(wbval) {
 	}
 }
 
-function TTS ( text ) {
-//	var section, frame;
-//	section   = document.getElementsByTagName( "head" )[ 0 ];
-//	frame     = document.createElement( "iframe" );
-//	frame.src = 'http://translate.google.com/translate_tts?ie=utf-8&tl=en&q=' + escape( text );
-//	section.appendChild( frame );
+function TTSi ( text ) {
+	var section, frame;
+	section   = document.getElementsByTagName( "head" )[ 0 ];
+	frame     = document.createElement( "iframe" );
+	frame.src = 'http://translate.google.com/translate_tts?ie=utf-8&tl=en&q=' + escape( text );
+	section.appendChild( frame );
+}
 
+function TTS5 ( text ) {
 	var audio = new Audio();
 	audio.src = 'http://translate.google.com/translate_tts?ie=utf-8&tl=en&q=' + escape( text );
+	audio.autoplay = true;
 console.log(audio);
-	audio.load();
-	audio.play();
+}
+
+function TTS ( text ) {
+	var msg = new SpeechSynthesisUtterance(text);
+	window.speechSynthesis.speak(msg);
 }
 
 $( document ).ready(function() {
