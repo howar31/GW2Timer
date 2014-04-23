@@ -28,6 +28,35 @@
 		"<li>Some World Boss events not in the normal rotation as official announced previously are not listed above.  Such as Fire Shaman, Dredge Commissar, Foulbear Chieftain, Eye of Zhaitan and Temple events.</li>"
 		]
 	},
+	"fr":{
+		"lang-name":"Français",
+		"header-title":"Guild Wars 2 Timer",
+		"header-subtitle":"Tableau des heures des world boss, mises à jour du pack de fonctionnalités 2014.",
+		"nav-note":"Notes",
+		"wbname-title":"World Boss",
+		"localtime-title":"Heure Locale",
+		"psttime-title":"Heure du Serveur",
+		"waypoint-title":"Point de passage",
+		"note-title":"Notes",
+		"note-totop":"Retour en haut",
+		"note-content":[
+		"<li>L'événement actuel est marqué avec un fond rouge et le texte\"<span class=\"note-red\">Now</span>\".</li>",
+		"<li>Passer la souris sur un World Boss va aussi <span class=\"note-hover\">surligner</span> tous les autres événement du même world boss.</li>",
+		"<li>Les couleurs des noms des World Boss sont la difficulté de l'événement, <a href=\"https://www.guildwars2.com/fr/news/the-megaserver-system-world-bosses-and-events/\" target=\"_blank\">comme annoncé officiellement</a>:",
+		"<ul>",
+			"<li>Les <span class=\"note-green\">verts</span> sont les <span class=\"note-underline\">Événements mondiaux Débutant</span>.</li>",
+			"<li>Les noirs sont <span class=\"note-underline\">Événements mondiaux Standard</span>.</li>",
+			"<li>Les <span class=\"note-red\">rouges</span> sont <span class=\"note-underline\">Événements Super-difficiles à grande échelle</span>.</li>",
+		"</ul>",
+		"</li>",
+		"<li>Cliquer sur un nom de World Boss pour <span class=\"note-done\">le marquer comme fait</span> quand vous avez fini cet événementt. Recliquer pour annuler. Les marques seront automatiquement supprimées chaque jour au reset journalier.</li>",
+		"<li>Cliquer sur le chat code d'un point de passage pour copier son chat code et le coller en jeu. Vous allez ensuite voir un lien cliquable en jeu de ce point de passage.</li>",
+		"<li>\"Heure Locale\" est automatiquement convertie au fuseau horaire de l'utilisateur.</li>",
+		"<li>\"Heure du serveur\" est l'heure des serveur du jeu visible en jeu, le fuseau correspondant est PST (PDT).</li>",
+		"<li>Cette page se raffraichira à 0 seconde chaque minute.</li>",
+		"<li>Certains World Boss qui ne sont pas dans la rotation normale comme précédement annoncé officiellement ne sont pas listés ici. Comme le Chamane de feu, le Kommissar draguerre, le Kraal d'Oursefol , L'Oeil de Zhaitan et les événement des temples.</li>"
+		]
+	},
 	"zh-tw":{
 		"lang-name":"正體中文",
 		"header-title":"激戰2 世界王時間表",
