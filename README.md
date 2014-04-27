@@ -8,7 +8,7 @@ GW2 Timer: [http://howar31.github.io/GW2Timer/](http://howar31.github.io/GW2Time
 ![previewimg](GW2Timer_Preview_en.png)
 
 > Feature:  
-> * Official World Boss time table sorted by uptime.
+> * [Official World Boss time table](https://www.guildwars2.com/en/news/the-megaserver-system-world-bosses-and-events/) sorted by uptime.
 > * Current active World Boss stay on top. (2 last events will be on top)
 > * Timezone conversion, showing local time and server time.
 > * Auto refresh page. (on 0 second every minute)
@@ -32,7 +32,7 @@ Any bug report or suggestion is welcome.  And yes you may also whisper me in-gam
 ![previewimg](GW2Timer_Preview_zhtw.png)
 
 > 特色功能:
-> * 官方世界王時間表，依時間排序
+> * [官方世界王時間表](https://www.guildwars2.com/en/news/the-megaserver-system-world-bosses-and-events/)，依時間排序
 > * 目前世界王置頂 (目前和前一個兩個事件會置頂)
 > * 依照使用者當前時區自動轉換時間
 > * 自動刷新頁面，每分鐘零秒的時候會刷新頁面

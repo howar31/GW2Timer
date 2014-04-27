@@ -11,6 +11,7 @@
 		"note-title":"Note",
 		"note-totop":"Back to top",
 		"note-content":[
+		"<li>Time table data provided by <a href=\"https://www.guildwars2.com/en/news/the-megaserver-system-world-bosses-and-events/\" target=\"_blank\">official news</a>.</li>",
 		"<li>Current event is marked as red background and \"<span class=\"note-red\">New</span>\" text.</li>",
 		"<li>Hover on one World Boss event will also <span class=\"note-hover\">highlight</span> all the same event on the whole time table.</li>",
 		"<li>Colours on World Boss name are the scale of event <a href=\"https://www.guildwars2.com/en/news/the-megaserver-system-world-bosses-and-events/\" target=\"_blank\">announced by official</a>:",
@@ -69,6 +70,7 @@
 		"note-title":"說明",
 		"note-totop":"回到頂端",
 		"note-content":[
+		"<li>所有世界王時間資料來源為<a href=\"https://www.guildwars2.com/en/news/the-megaserver-system-world-bosses-and-events/\" target=\"_blank\">官方新聞</a></li>",
 		"<li>目前進行中的世界王世界以紅圖背景與「<span class=\"note-red\">New</span>」字樣標記</li>",
 		"<li>滑鼠指標指在一個世界王事件上，會同時 <span class=\"note-hover\">高亮標記</span> 所有相同的世界王事件</li>",
 		"<li>世界王名稱上的顏色是依照<a href=\"https://www.guildwars2.com/en/news/the-megaserver-system-world-bosses-and-events/\" target=\"_blank\">官方公告</a>的世界王等級標記:",
