@@ -35,6 +35,7 @@ function getnowtime() {
 }
 
 function refreshall () {
+	var clang = (getCookie("lang")?getCookie("lang"):"en");
 	$(".table-content").remove();
 	$.getJSON("./wbtime.json", function(json) {
 		var i = 0;
@@ -46,15 +47,18 @@ function refreshall () {
 				sec = str2sec(json.worldboss[i].uptime[j]);
 				lsec = sec + ((7 + getTimezone()) * 3600)
 				if (lsec >= 86400) lsec -= 86400;
+				var tname = (json.worldboss[i].name[clang]?json.worldboss[i].name[clang]:json.worldboss[i].name.en);
+				var tmap = (json.worldboss[i].map[clang]?json.worldboss[i].map[clang]:json.worldboss[i].map.en);
 				wbt[k++] = {
-					class: json.worldboss[i].name.replace(/\s+/g, ''),
-					name: json.worldboss[i].name, 
+//					id: json.worldboss[i].name.replace(/\s+/g, ''),
+					id: json.worldboss[i].id,
+					name: tname,
+					map: tmap,
 					uptime: json.worldboss[i].uptime[j], 
 					upsec: sec, 
 					lctime: sec2str(lsec),
 					lcsec: lsec,
 					scale: json.worldboss[i].scale,
-					map: json.worldboss[i].map,
 					waypoint: json.worldboss[i].waypoint
 				};
 				j++;
@@ -63,9 +67,9 @@ function refreshall () {
 		}
 		wbt.sort(sortByTime);
 		for (i = 0; i<k; i++) {
-			var donechk = wbdonecheck(wbt[i].class)?" done":"";
-			var tmp = '<div class="row table-content scale-'+wbt[i].scale+' '+wbt[i].class+'">'
-				+'<div class="col-sm-4 wbname'+donechk+'"><span class="wbclass" hidden>'+wbt[i].class+'</span>'+wbt[i].name+'<span class="wbmap">'+(wbt[i].map?" - "+wbt[i].map:"")+'</span></div>'
+			var donechk = wbdonecheck(wbt[i].id)?" done":"";
+			var tmp = '<div class="row table-content scale-'+wbt[i].scale+' '+wbt[i].id+'">'
+				+'<div class="col-sm-4 wbframe'+donechk+'"><span class="wbid" hidden>'+wbt[i].id+'</span>'+wbt[i].name+'<span class="wbmap">'+(wbt[i].map?" - "+wbt[i].map:"")+'</span></div>'
 				+'<div class="col-sm-3 localtime">'+wbt[i].lctime+'</div>'
 				+'<div class="col-sm-3 psttime">'+wbt[i].uptime+'</div>'
 				+'<div class="col-sm-2 waypoint">'+wbt[i].waypoint+'</div>'
@@ -75,8 +79,7 @@ function refreshall () {
 	});
 }
 
-function getCookie(cname)
-{
+function getCookie(cname) {
 	var name = cname + "=";
 	var ca = document.cookie.split(';');
 	for(var i=0; i<ca.length; i++) {
@@ -202,6 +205,7 @@ $( document ).ready(function() {
 		var expire = new Date();
 		expire.setFullYear(now.getFullYear() + 10);
 		setCookie("lang", $("#lang-select option:selected").val(), expire );
+		refreshall();
 	});
 
 	$( document ).on("click", ".waypoint:not(:has(input))", function() {
@@ -213,16 +217,16 @@ $( document ).ready(function() {
 		}).focus().select();
 	});
 
-	$( document ).on("click", ".wbname", function() {
-		var wbid = $(this).children("span.wbclass").html();
-		wbdone(wbid);
-		$("."+wbid+">.wbname").toggleClass("done");
+	$( document ).on("click", ".wbframe", function() {
+		var twbid = $(this).children("span.wbid").html();
+		wbdone(twbid);
+		$("."+twbid+">.wbframe").toggleClass("done");
 	});
 
 	$( document ).on("mouseenter", ".table-content", function() {
-		$("."+$(this).children(".wbname").children(".wbclass").html()).addClass("row-highlight");
+		$("."+$(this).children(".wbframe").children(".wbid").html()).addClass("row-highlight");
 	});
 	$( document ).on("mouseleave", ".table-content", function() {
-		$("."+$(this).children(".wbname").children(".wbclass").html()).removeClass("row-highlight");
+		$("."+$(this).children(".wbframe").children(".wbid").html()).removeClass("row-highlight");
 	});
 });

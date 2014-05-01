@@ -1,100 +1,101 @@
 {
 	"worldboss":[{
-		"name":"Megadestroyer",
+		"id":"Megadestroyer",
+		"name":{"en":"Megadestroyer","fr":"Mégadestructeur","zh-tw":"Megadestroyer 火山王"},
+		"map":{"en":"Mount Maelstrom","fr":"Mont Maelström"},
 		"uptime":["16:00","21:00","02:30","07:30","12:30"],
 		"scale":"standard",
-		"map":"Mount Maelstrom",
 		"waypoint":"[&BM0CAAA=]"
-	},
-	{
-		"name":"Jungle Wurm",
-		"uptime":["16:15","18:15","20:15","22:15","00:15","02:15","04:15","06:15","08:15","10:15","12:15","14:15"],
+	},{
+		"id":"JungleWurm",
+		"name":{"en":"Jungle Wurm","fr":"Guivre de la jungle","zh-tw":"Jungle Wurm 大蟲"},
+		"map":{"en":"Caledon Forest","fr":"Forêt de Caledon"},
+		"uptime":["16:15","18:15","20:15","22:15","00:15","02:15","04:15","06:15","07:15","08:15","10:15","12:15","14:15"],
 		"scale":"lowlevel",
-		"map":"Caledon Forest",
 		"waypoint":"[&BEEFAAA=]"
-	},
-	{
-		"name":"TBD",
+	},{
+		"id":"TBD",
+		"name":{"en":"TBD","fr":"À déterminer","zh-tw":"TBD 中場休息沒有王"},
+		"map":{"en":"","fr":""},
 		"uptime":["16:30","21:30","03:00","08:00","13:00"],
 		"scale":"none",
-		"map":"",
 		"waypoint":""
-	},
-	{
-		"name":"Shadow Behemoth",
+	},{
+		"id":"ShadowBehemoth",
+		"name":{"en":"Shadow Behemoth","fr":"Béhémoth des ombres","zh-tw":"Shadow Behemoth 影魔"},
+		"map":{"en":"Queensdale","fr":"Vallée de la reine"},
 		"uptime":["16:45","18:45","20:45","22:45","00:45","02:45","04:45","06:45","08:45","10:45","12:45","14:45"],
 		"scale":"lowlevel",
-		"map":"Queensdale",
 		"waypoint":"[&BPwAAAA=]"
-	},
-	{
-		"name":"The Shatterer",
+	},{
+		"id":"TheShatterer",
+		"name":{"en":"The Shatterer","fr":"Le Destructeur","zh-tw":"The Shatterer 水晶龍"},
+		"map":{"en":"Blazeridge Steppes","fr":"Les Steppes de la Strie flamboyante"},
 		"uptime":["17:00","22:00","00:00","04:00","08:30","13:30"],
 		"scale":"standard",
-		"map":"Blazeridge Steppes",
 		"waypoint":"[&BE4DAAA=]"
-	},
-	{
-		"name":"Svanir Shaman",
-		"uptime":["17:15","19:15","21:15","23:15","01:15","03:15","05:15","07:15","09:15","11:15","13:15","15:15"],
+	},{
+		"id":"SvanirShaman",
+		"name":{"en":"Svanir Shaman","fr":"Chamane de Svanir","zh-tw":"Svanir Shaman 冰薩滿"},
+		"map":{"en":"Wayfarer Foothills","fr":"Contreforts du Voyageur"},
+		"uptime":["17:15","19:15","21:15","23:15","01:15","03:15","05:15","09:15","11:15","13:15","15:15"],
 		"scale":"lowlevel",
-		"map":"Wayfarer Foothills",
 		"waypoint":"[&BH4BAAA=]"
-	},
-	{
-		"name":"Modniir Ulgoth",
+	},{
+		"id":"ModniirUlgoth",
+		"name":{"en":"Modniir Ulgoth","fr":"Ulgoth le Modniir","zh-tw":"Modniir Ulgoth 人馬王"},
+		"map":{"en":"Harathi Hinterlands","fr":"Hinterlands Harathis"},
 		"uptime":["17:30","22:30","00:30","05:00","09:30","14:00"],
 		"scale":"standard",
-		"map":"Harathi Hinterlands",
 		"waypoint":"[&BLEAAAA=]"
-	},
-	{
-		"name":"Fire Elemental",
+	},{
+		"id":"FireElemental",
+		"name":{"en":"Fire Elemental","fr":"Élémentaire de feu","zh-tw":"Fire Elemental 火元素"},
+		"map":{"en":"Metrica Province","fr":"Province de Metrica"},
 		"uptime":["17:45","19:45","21:45","23:45","01:45","03:45","05:45","07:45","09:45","11:45","13:45","15:45"],
 		"scale":"lowlevel",
-		"map":"Metrica Province",
 		"waypoint":"[&BEcAAAA=]"
-	},
-	{
-		"name":"Karka Queen",
+	},{
+		"id":"KarkaQueen",
+		"name":{"en":"Karka Queen","fr":"Reine karka","zh-tw":"Karka Queen 卡卡女王"},
+		"map":{"en":"Southsun Cove","fr":"Crique de Sud-Soleil"},
 		"uptime":["18:00","03:30","09:00"],
 		"scale":"hardcore",
-		"map":"Southsun Cove",
 		"waypoint":"[&BNcGAAA=]"
-	},
-	{
-		"name":"Golem Mark II",
+	},{
+		"id":"GolemMarkII",
+		"name":{"en":"Golem Mark II","fr":"Golem Marque II","zh-tw":"Golem Mark II 高輪"},
+		"map":{"en":"Mount Maelstrom","fr":"Mont Maelström"},
 		"uptime":["18:30","23:00","01:00","06:00","10:30","14:30"],
 		"scale":"standard",
-		"map":"Mount Maelstrom",
 		"waypoint":"[&BNQCAAA=]"
-	},
-	{
-		"name":"Tequatl",
+	},{
+		"id":"Tequatl",
+		"name":{"en":"Tequatl","fr":"Tequatl","zh-tw":"Tequatl 屍龍TEQ"},
+		"map":{"en":"Sparkfly Fen","fr":"Marais de Lumillule"},
 		"uptime":["19:00","04:30","10:00"],
 		"scale":"hardcore",
-		"map":"Sparkfly Fen",
 		"waypoint":"[&BNABAAA=]"
-	},
-	{
-		"name":"Claw of Jormag",
+	},{
+		"id":"ClawofJormag",
+		"name":{"en":"Claw of Jormag","fr":"Griffe de Jormag","zh-tw":"Claw of Jormag 冰龍"},
+		"map":{"en":"Frostgorge Sound","fr":"Détroit des gorges glacées"},
 		"uptime":["19:30","23:30","01:30","06:30","11:30","15:00"],
 		"scale":"standard",
-		"map":"Frostgorge Sound",
 		"waypoint":"[&BHoCAAA=]"
-	},
-	{
-		"name":"Great Jungle Wurm",
+	},{
+		"id":"GreatJungleWurm",
+		"name":{"en":"Great Jungle Wurm","fr":"Grande guivre de la jungle","zh-tw":"Great Jungle Wurm 三頭蟲"},
+		"map":{"en":"Bloodtide Coast","fr":"Côte de la marée sanglante"},
 		"uptime":["20:00","05:30","11:00"],
 		"scale":"hardcore",
-		"map":"Bloodtide Coast",
 		"waypoint":"[&BKoBAAA=]"
-	},
-	{
-		"name":"Taidha Covington",
+	},{
+		"id":"Taidha Covington",
+		"name":{"en":"Taidha Covington","fr":"Taidha Covington","zh-tw":"Taidha Covington 海賊女王"},
+		"map":{"en":"Bloodtide Coast","fr":"Côte de la marée sanglante"},
 		"uptime":["20:30","02:00","07:00","12:00","15:30"],
 		"scale":"standard",
-		"map":"Bloodtide Coast",
 		"waypoint":"[&BKgBAAA=]"
 	}]
 }
