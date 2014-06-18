@@ -87,7 +87,7 @@
 		"id":"GreatJungleWurm",
 		"name":{"en":"Great Jungle Wurm","fr":"Grande guivre de la jungle","zh-tw":"Great Jungle Wurm 三頭蟲"},
 		"map":{"en":"Bloodtide Coast","fr":"Côte de la marée sanglante"},
-		"uptime":["05:30","11:00","10:00","13:00","18:00","21:00","01:00"],
+		"uptime":["05:30","10:00","13:00","18:00","21:00","01:00"],
 		"scale":"hardcore",
 		"waypoint":"[&BKoBAAA=]"
 	},{
