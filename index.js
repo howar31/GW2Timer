@@ -1,6 +1,17 @@
 function getTimezone () {
 	var offset = new Date().getTimezoneOffset();
-	return (offset * -1 / 60);
+	return (offset * -1 / 60.0);
+}
+
+function getTimezoneOffsetStr () {
+	var tz=getTimezone();
+	var hh = parseInt(tz);
+	var mm = (tz - Math.floor(tz)) * 60;
+
+	var str = "UTC";
+	str += (tz >= 0 ? "+" : "") + hh;
+	str += (mm == 0 ? "" : ":" + mm)
+	return str;
 }
 
 function str2sec (str) {
@@ -187,7 +198,7 @@ function refreshlang() {
 }
 
 $( document ).ready(function() {
-	$("#nowtimezone").append(" (UTC+"+getTimezone()+")");
+	$("#nowtimezone").append(" ("+getTimezoneOffsetStr()+")");
 
 	refreshlang();
 	refreshall();
