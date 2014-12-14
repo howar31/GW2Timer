@@ -72,7 +72,7 @@ function refreshall () {
 			var tmp = '<div class="row table-content scale-'+wbt[i].scale+' '+wbt[i].id+'">'
 				+'<div class="col-sm-4 wbframe'+donechk+'"><span class="wbid" hidden>'+wbt[i].id+'</span>'+wbt[i].name+'<span class="wbmap">'+(wbt[i].map?" - "+wbt[i].map:"")+'</span></div>'
 				+'<div class="col-sm-3 localtime">'+wbt[i].lctime+'</div>'
-				+'<div class="col-sm-3 psttime">'+wbt[i].uptime+'</div>'
+				+'<div class="col-sm-3 utctime">'+wbt[i].uptime+'</div>'
 				+'<div class="col-sm-2 waypoint">'+wbt[i].waypoint+'</div>'
 				+'</div>';
 			$("#table-worldboss").append(tmp); 
