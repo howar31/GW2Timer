@@ -45,7 +45,7 @@ function refreshall () {
 			var j = 0;
 			while(json.worldboss[i].uptime[j]) {
 				sec = str2sec(json.worldboss[i].uptime[j]);
-				lsec = sec + ((7 + getTimezone()) * 3600)
+				lsec = sec + (getTimezone() * 3600)
 				if (lsec >= 86400) lsec -= 86400;
 				if (lsec < 0) lsec += 86400;
 				var tname = (json.worldboss[i].name[clang]?json.worldboss[i].name[clang]:json.worldboss[i].name.en);
