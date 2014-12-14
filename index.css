@@ -25,13 +25,13 @@ body {
 
 #countdown-div,
 #localtime-div,
-#psttime-div {
+#utctime-div {
 	text-align: center;
 }
 
 .countdown,
 .localtime,
-.psttime {
+.utctime {
 	text-align: center;
 }
 

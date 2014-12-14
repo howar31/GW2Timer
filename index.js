@@ -1,6 +1,17 @@
 function getTimezone () {
 	var offset = new Date().getTimezoneOffset();
-	return (offset * -1 / 60);
+	return (offset * -1 / 60.0);
+}
+
+function getTimezoneOffsetStr () {
+	var tz=getTimezone();
+	var hh = parseInt(tz);
+	var mm = (tz - Math.floor(tz)) * 60;
+
+	var str = "UTC";
+	str += (tz >= 0 ? "+" : "") + hh;
+	str += (mm == 0 ? "" : ":" + mm)
+	return str;
 }
 
 function str2sec (str) {
@@ -45,8 +56,9 @@ function refreshall () {
 			var j = 0;
 			while(json.worldboss[i].uptime[j]) {
 				sec = str2sec(json.worldboss[i].uptime[j]);
-				lsec = sec + ((7 + getTimezone()) * 3600)
+				lsec = sec + (getTimezone() * 3600)
 				if (lsec >= 86400) lsec -= 86400;
+				if (lsec < 0) lsec += 86400;
 				var tname = (json.worldboss[i].name[clang]?json.worldboss[i].name[clang]:json.worldboss[i].name.en);
 				var tmap = (json.worldboss[i].map[clang]?json.worldboss[i].map[clang]:json.worldboss[i].map.en);
 				wbt[k++] = {
@@ -71,7 +83,7 @@ function refreshall () {
 			var tmp = '<div class="row table-content scale-'+wbt[i].scale+' '+wbt[i].id+'">'
 				+'<div class="col-sm-4 wbframe'+donechk+'"><span class="wbid" hidden>'+wbt[i].id+'</span>'+wbt[i].name+'<span class="wbmap">'+(wbt[i].map?" - "+wbt[i].map:"")+'</span></div>'
 				+'<div class="col-sm-3 localtime">'+wbt[i].lctime+'</div>'
-				+'<div class="col-sm-3 psttime">'+wbt[i].uptime+'</div>'
+				+'<div class="col-sm-3 utctime">'+wbt[i].uptime+'</div>'
 				+'<div class="col-sm-2 waypoint">'+wbt[i].waypoint+'</div>'
 				+'</div>';
 			$("#table-worldboss").append(tmp); 
@@ -186,7 +198,7 @@ function refreshlang() {
 }
 
 $( document ).ready(function() {
-	$("#nowtimezone").append(" (UTC+"+getTimezone()+")");
+	$("#nowtimezone").append(" ("+getTimezoneOffsetStr()+")");
 
 	refreshlang();
 	refreshall();
