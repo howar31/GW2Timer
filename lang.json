@@ -53,7 +53,7 @@
 		"<li>Cliquer sur un nom de World Boss pour <span class=\"note-done\">le marquer comme fait</span> quand vous avez fini cet événementt. Recliquer pour annuler. Les marques seront automatiquement supprimées chaque jour au reset journalier.</li>",
 		"<li>Cliquer sur le chat code d'un point de passage pour copier son chat code et le coller en jeu. Vous allez ensuite voir un lien cliquable en jeu de ce point de passage.</li>",
 		"<li>\"Heure Locale\" est automatiquement convertie au fuseau horaire de l'utilisateur.</li>",
-		"<li>\"Heure du serveur\" est l'heure des serveur du jeu visible en jeu, le fuseau correspondant est PST (PDT).</li>",
+		"<li>\"Heure du serveur\" est l'heure des serveur du jeu visible en jeu, le fuseau correspondant est (UTC).</li>",
 		"<li>Cette page se raffraichira à 0 seconde chaque minute.</li>",
 		"<li>Certains World Boss qui ne sont pas dans la rotation normale comme précédement annoncé officiellement ne sont pas listés ici. Comme le Chamane de feu, le Kommissar draguerre, le Kraal d'Oursefol , L'Oeil de Zhaitan et les événement des temples.</li>"
 		]
