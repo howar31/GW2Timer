@@ -24,7 +24,7 @@
 		"<li>Click on World Boss names to <span class=\"note-done\">cross them off</span> when you done those events.  Click again to undo.  Marks will be automatically cleared at server daily reset.</li>",
 		"<li>Click on Waypoint chat link to copy the chat link and paste it in game chat.  You will then see a clickable in-game waypoint link.</li>",
 		"<li>\"Local Time\" is automatically converted to user's current timezone.</li>",
-		"<li>\"Server Time\" is in-game server time which timezone is PST (PDT).</li>",
+		"<li>\"Server Time\" is the in-game server time, which is UTC.</li>",
 		"<li>This page will auto-refresh at 0 second every minute.</li>",
 		"<li>Some World Boss events not in the normal rotation as official announced previously are not listed above.  Such as Fire Shaman, Dredge Commissar, Foulbear Chieftain, Eye of Zhaitan and Temple events.</li>"
 		]
