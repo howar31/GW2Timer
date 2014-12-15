@@ -24,7 +24,7 @@
 		"<li>Click on World Boss names to <span class=\"note-done\">cross them off</span> when you done those events.  Click again to undo.  Marks will be automatically cleared at server daily reset.</li>",
 		"<li>Click on Waypoint chat link to copy the chat link and paste it in game chat.  You will then see a clickable in-game waypoint link.</li>",
 		"<li>\"Local Time\" is automatically converted to user's current timezone.</li>",
-		"<li>\"Server Time\" is in-game server time which timezone is PST (PDT).</li>",
+		"<li>\"Server Time\" is the in-game server time, which is UTC.</li>",
 		"<li>This page will auto-refresh at 0 second every minute.</li>",
 		"<li>Some World Boss events not in the normal rotation as official announced previously are not listed above.  Such as Fire Shaman, Dredge Commissar, Foulbear Chieftain, Eye of Zhaitan and Temple events.</li>"
 		]
@@ -53,7 +53,7 @@
 		"<li>Cliquer sur un nom de World Boss pour <span class=\"note-done\">le marquer comme fait</span> quand vous avez fini cet événementt. Recliquer pour annuler. Les marques seront automatiquement supprimées chaque jour au reset journalier.</li>",
 		"<li>Cliquer sur le chat code d'un point de passage pour copier son chat code et le coller en jeu. Vous allez ensuite voir un lien cliquable en jeu de ce point de passage.</li>",
 		"<li>\"Heure Locale\" est automatiquement convertie au fuseau horaire de l'utilisateur.</li>",
-		"<li>\"Heure du serveur\" est l'heure des serveur du jeu visible en jeu, le fuseau correspondant est PST (PDT).</li>",
+		"<li>\"Heure du serveur\" est l'heure des serveur du jeu visible en jeu, le fuseau correspondant est (UTC).</li>",
 		"<li>Cette page se raffraichira à 0 seconde chaque minute.</li>",
 		"<li>Certains World Boss qui ne sont pas dans la rotation normale comme précédement annoncé officiellement ne sont pas listés ici. Comme le Chamane de feu, le Kommissar draguerre, le Kraal d'Oursefol , L'Oeil de Zhaitan et les événement des temples.</li>"
 		]
@@ -83,7 +83,7 @@
 		"<li>點擊世界王名字可以 <span class=\"note-done\">標記</span> 你已經完成的事件，再點一次可以取消標記，標記會在每日伺服器重置的時候自動清除</li>",
 		"<li>點擊傳送點代碼可以全選，將其複製並貼在遊戲聊天室窗中就會自動產生遊戲內可以點選的傳送點連結</li>",
 		"<li>「本地時間」會自動轉換成目前使用者所在時區的時間</li>",
-		"<li>「伺服器時間」與遊戲內的伺服器時間相同，時區為太平洋時區 PST (PDT)</li>",
+		"<li>「伺服器時間」與遊戲內的伺服器時間相同，時區為太平洋時區 UTC</li>",
 		"<li>世界王時間表會在每分鐘零秒的時候自動刷新並重新排序，不需要手動按重新整理</li>",
 		"<li>有些世界王並沒有列在上面的時間表中，例如Fire Shaman(火薩滿)、Dredge Commissar(地鼠)、Foulbear Chieftain(歐格)、Eye of Zhaitan(大眼)還有神廟事件，這是因為這些世界王並沒有被官方列在一般的世界王排班時間內，所以並非固定時間出現</li>"
 		]
